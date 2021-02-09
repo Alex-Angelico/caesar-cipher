@@ -1,8 +1,13 @@
 import nltk
+
+# from nltk.corpus import words, names
 from nltk.corpus import words
 
+
 nltk.download("words", quiet=True)
+# nltk.download("names", quiet=True)
 word_list = words.words()
+# name_list = names.names()
 
 
 def encrypt(string, shift):
@@ -50,12 +55,11 @@ def crack(cypher):
                 cracked_sublist.append(shift_word)
         cracked_list.append(cracked_sublist)
 
-    index = len(cracked_list)
+    cracked_list_length = len(cracked_list)
     longest_sublist = 0
-    for i in range(index):
-        for j in range(index):
-            if len(cracked_list[i]) > longest_sublist:
-                longest_sublist = i
+    for i in range(cracked_list_length):
+        if len(cracked_list[i]) > longest_sublist:
+            longest_sublist = i
 
     cracked_string = " "
     cracked_string = cracked_string.join(cracked_list[longest_sublist])
