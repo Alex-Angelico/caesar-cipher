@@ -42,5 +42,4 @@ For Wikipedia web scrape sample, open ```caesar_cipher.py```
 
 ## Change Log
 
-.: ** - 06 Feb 2021
-# caesar-cipher
+1.0: *Functions and testing complete* - 06 Feb 2021
